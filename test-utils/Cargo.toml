@@ -1,0 +1,10 @@
+[package]
+name = "test-utils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+ssz_rs = { workspace = true }
+serde_yaml = "0.9.19"
+snap = "1.1.0"
