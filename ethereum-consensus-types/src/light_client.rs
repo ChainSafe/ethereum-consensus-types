@@ -175,6 +175,10 @@ pub struct ExecutionPayloadHeader<
     pub block_hash: Root,
     pub transactions_root: Root,
     pub withdrawals_root: Root,
+    #[cfg_attr(feature = "serde", serde(with = "crate::as_str"))]
+    pub blob_gas_used: u64,
+    #[cfg_attr(feature = "serde", serde(with = "crate::as_str"))]
+    pub excess_blob_gas: u64
 }
 
 #[derive(Clone, Default, Debug, Eq, PartialEq, SimpleSerialize)]
